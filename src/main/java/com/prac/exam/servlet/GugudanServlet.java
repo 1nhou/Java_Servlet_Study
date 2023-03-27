@@ -1,6 +1,7 @@
 package com.prac.exam.servlet;
 
 import com.prac.exam.Rq;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -19,9 +20,16 @@ public class GugudanServlet extends HttpServlet {
         int dan = rq.getIntParam("dan", 0);
         int limit = rq.getIntParam("limit", 0);
 
-        rq.appendBody(String.format("<div class=\"a\">%d단 test</div>\n", (dan)));
-        for (int j = 1; j < limit; j++) {
-            resp.getWriter().append(String.format("<div>%d * %d = %d</div>", (dan), (j), (dan * j)));
+        // request에 정보를 담는다.
+        // gugudan2.jsp에서 해당 내용을 가져갈수있도록.
+        req.setAttribute("dan",dan);
+        req.setAttribute("limit",limit);
+
+        // gugudan2.jsp 에게 나머지 작업을 전달
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/gugudan2.jsp");
+        requestDispatcher.forward(req,resp);
+
+
         }
     }
-}
+
