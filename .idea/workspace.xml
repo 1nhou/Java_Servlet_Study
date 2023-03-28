@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4aca5efc-a717-459a-8298-119ac9fa5b16" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/../../JavaWorkspace/JavaWorkspace.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/article/list.jsp" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../test/test-webp/test-webp.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../test1/test1/.idea/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../../test1/test1/.idea/compiler.xml" afterDir="false" />
@@ -106,7 +105,7 @@
       <change beforePath="$PROJECT_DIR$/../../TeamPorject-MoyeoMoyeo/yarn.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/gugudan2.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/gugudan2.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/article/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/article/list.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +155,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "zulu-11",
-    "last_opened_file_path": "/Users/inho/Desktop/servlet_study/servlet_study/src/main/webapp",
+    "last_opened_file_path": "/Users/inho/Desktop/servlet_study/servlet_study/src/main/webapp/article",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -165,6 +164,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/webapp/article" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -172,6 +172,9 @@
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.prac.exam.servlet" />
     </key>
   </component>
   <component name="RunManager">

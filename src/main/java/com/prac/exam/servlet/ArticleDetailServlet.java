@@ -14,8 +14,8 @@ import java.sql.SQLException;
 import java.util.List;
 import java.util.Map;
 
-@WebServlet("/article/list")
-public class ArticleListServlet extends HttpServlet {
+@WebServlet("/article/detail")
+public class ArticleDetailServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         // DB 연결시작
@@ -32,15 +32,21 @@ public class ArticleListServlet extends HttpServlet {
         String user = "root";
         String password = "P@ssw0rd";
 
+
+
         try {
             conn = DriverManager.getConnection(url, user, password);
             DBUtil dbUtil = new DBUtil(req, resp);
 
-            String sql = "SELECT * FROM article";
-            List<Map<String, Object>> articleRows = dbUtil.selectRows(conn, sql);
+            //req.getParameter() String 형태로 받아오기때문에 형변환해서 사용할것.
+            int id = Integer.parseInt(req.getParameter("id"));
 
-            req.setAttribute("articleRows", articleRows);
-            req.getRequestDispatcher("../article/list.jsp").forward(req,resp);
+            //String.format()을 이용하면 %d 서식 지정자 사용가능
+            String sql = String.format("SELECT * FROM article WHERE id = %d", id);
+            Map<String, Object> articleRow = dbUtil.selectRow(conn, sql);
+
+            req.setAttribute("articleRows", articleRow);
+            req.getRequestDispatcher("../article/detail.jsp").forward(req,resp);
 
 
 
