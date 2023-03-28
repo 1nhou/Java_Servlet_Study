@@ -29,8 +29,8 @@ public class ArticleListServlet extends HttpServlet {
         }
 
         String url = "jdbc:mysql://127.0.0.1:3306/JSP_Community?useUnicode=true&characterEncoding=utf8&autoReconnect=true&serverTimezone=Asia/Seoul&useOldAliasMetadataBehavior=true&zeroDateTimeNehavior=convertToNull";
-        String user = "test";
-        String password = "test1234";
+        String user = "root";
+        String password = "P@ssw0rd";
 
         try {
             conn = DriverManager.getConnection(url, user, password);
@@ -38,6 +38,8 @@ public class ArticleListServlet extends HttpServlet {
 
             String sql = "SELECT * FROM article";
             List<Map<String, Object>> articleRows = dbUtil.selectRows(conn, sql);
+
+            System.out.println(sql);
 
         } catch (SQLException e) {
             e.printStackTrace();
