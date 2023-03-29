@@ -39,13 +39,37 @@ public class ArticleListServlet extends HttpServlet {
 //            정적 메서드화를 이용해 객체를 다시 만들지 않는다.
 
 //            String sql = "SELECT * FROM article";
-            SecSql sql = SecSql.from("SELECT * ");
+            int page = 1;
+
+            if(req.getParameter("page") != null && req.getParameter("page").length() != 0){
+                page = Integer.parseInt(req.getParameter("page"));
+            }
+
+
+            int itemInPage = 10;
+            int limitFrom = (page -1) * itemInPage;
+
+            SecSql sql = SecSql.from("SELECT COUNT(*) AS cnt");
+            sql.append("FROM article");
+
+
+            int totalCount = DBUtil.selectRowIntValue(conn, sql);
+            int totalPage = (int)Math.ceil((double)totalCount / itemInPage);
+
+
+
+            sql = SecSql.from("SELECT * ");
             sql.append("FROM article");
             sql.append("ORDER BY id DESC");
+            sql.append("LIMIT ?, ?", limitFrom,itemInPage);
+
+            System.out.println(sql);
 
             List<Map<String, Object>> articleRows = DBUtil.selectRows(conn, sql);
 
             req.setAttribute("articleRows", articleRows);
+            req.setAttribute("page",page);
+            req.setAttribute("totalPage",totalPage);
             req.getRequestDispatcher("../article/list.jsp").forward(req,resp);
 
 
