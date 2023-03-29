@@ -106,12 +106,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDetailServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/HelloServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/HelloMainServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/util/DBUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/util/DBUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleDetailServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleListServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/HelloServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/util/DBUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleDetailServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleDetailServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleListServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/util/DBUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prac/exam/util/DBUtil.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

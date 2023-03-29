@@ -1,6 +1,7 @@
 package com.prac.exam.servlet;
 
 import com.prac.exam.util.DBUtil;
+import com.prac.exam.util.SecSql;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -37,7 +38,11 @@ public class ArticleListServlet extends HttpServlet {
 //            DBUtil dbUtil = new DBUtil(req, resp);
 //            정적 메서드화를 이용해 객체를 다시 만들지 않는다.
 
-            String sql = "SELECT * FROM article";
+//            String sql = "SELECT * FROM article";
+            SecSql sql = SecSql.from("SELECT * ");
+            sql.append("FROM article");
+            sql.append("ORDER BY id DESC");
+
             List<Map<String, Object>> articleRows = DBUtil.selectRows(conn, sql);
 
             req.setAttribute("articleRows", articleRows);

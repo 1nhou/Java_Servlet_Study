@@ -1,6 +1,7 @@
 package com.prac.exam.servlet;
 
 import com.prac.exam.util.DBUtil;
+import com.prac.exam.util.SecSql;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -40,8 +41,14 @@ public class ArticleDetailServlet extends HttpServlet {
             int id = Integer.parseInt(req.getParameter("id"));
 
             //String.format()을 이용하면 %d 서식 지정자 사용가능
-            String sql = String.format("SELECT * FROM article WHERE id = %d", id);
+//            String sql = String.format("SELECT * FROM article WHERE id = %d", id);
+
+            SecSql sql = SecSql.from("SELECT * ");
+            sql.append("FROM article");
+            sql.append("WHERE id = ?", id);
+
             Map<String, Object> articleRow = DBUtil.selectRow(conn, sql);
+
 
             req.setAttribute("articleRows", articleRow);
             req.getRequestDispatcher("../article/detail.jsp").forward(req,resp);
