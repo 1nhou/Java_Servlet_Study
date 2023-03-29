@@ -11,6 +11,12 @@ int totalPage = (int) request.getAttribute("totalPage");
 <html lang="ko">
 <body>
 <h1>게시물 리스트 v5</h1>
+
+<div>
+    <a href="write">게시물 작성</a>
+</div>
+
+
 <table border="1" style="text-align: center;">
     <thead>
     <colgroup>

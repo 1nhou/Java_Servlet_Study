@@ -69,5 +69,9 @@ public class ArticleDoDeleteServlet extends HttpServlet {
         }
         // DB 연결 끝
     }
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
+    }
 }
 

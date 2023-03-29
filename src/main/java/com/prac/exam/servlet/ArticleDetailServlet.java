@@ -1,5 +1,6 @@
 package com.prac.exam.servlet;
 
+import com.prac.exam.Rq;
 import com.prac.exam.util.DBUtil;
 import com.prac.exam.util.SecSql;
 import jakarta.servlet.ServletException;
@@ -19,6 +20,8 @@ import java.util.Map;
 public class ArticleDetailServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Rq rq = new Rq(req,resp);
+
         // DB 연결시작
         Connection conn = null;
         try {
@@ -51,7 +54,9 @@ public class ArticleDetailServlet extends HttpServlet {
 
 
             req.setAttribute("articleRows", articleRow);
-            req.getRequestDispatcher("../article/detail.jsp").forward(req,resp);
+            rq.jsp("../article/detail");
+//            req.getRequestDispatcher("../article/detail.jsp").forward(req,resp);
+            //rq를 통해 메소드를 만들었기때문에 굳이 이렇게 처리하지않고 rq에게 토스
 
 
 
@@ -67,6 +72,10 @@ public class ArticleDetailServlet extends HttpServlet {
             }
         }
         // DB 연결 끝
+    }
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
     }
 }
 

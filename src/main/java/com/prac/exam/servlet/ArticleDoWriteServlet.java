@@ -49,6 +49,7 @@ public class ArticleDoWriteServlet extends HttpServlet {
             sql.append(", body = ?", body);
 
             int id = DBUtil.insert(conn,sql);
+
             rq.appendBody(String.format("<script>alert('%d번글 생성 완료.'); location.replace('list')</script>",id));
 
 
@@ -65,6 +66,11 @@ public class ArticleDoWriteServlet extends HttpServlet {
             }
         }
         // DB 연결 끝
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doGet(req, resp);
     }
 }
 

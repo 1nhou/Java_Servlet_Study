@@ -105,10 +105,14 @@
       <change beforePath="$PROJECT_DIR$/../../TeamPorject-MoyeoMoyeo/yarn.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/Rq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/Rq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDetailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDetailServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoDeleteServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoWriteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoWriteServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/HelloMainServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/HelloMainServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/article/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/article/list.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/Rq.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prac/exam/Rq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleDetailServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleDetailServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleListServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
