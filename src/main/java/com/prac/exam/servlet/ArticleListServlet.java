@@ -34,10 +34,11 @@ public class ArticleListServlet extends HttpServlet {
 
         try {
             conn = DriverManager.getConnection(url, user, password);
-            DBUtil dbUtil = new DBUtil(req, resp);
+//            DBUtil dbUtil = new DBUtil(req, resp);
+//            정적 메서드화를 이용해 객체를 다시 만들지 않는다.
 
             String sql = "SELECT * FROM article";
-            List<Map<String, Object>> articleRows = dbUtil.selectRows(conn, sql);
+            List<Map<String, Object>> articleRows = DBUtil.selectRows(conn, sql);
 
             req.setAttribute("articleRows", articleRows);
             req.getRequestDispatcher("../article/list.jsp").forward(req,resp);

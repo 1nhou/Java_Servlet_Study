@@ -36,14 +36,12 @@ public class ArticleDetailServlet extends HttpServlet {
 
         try {
             conn = DriverManager.getConnection(url, user, password);
-            DBUtil dbUtil = new DBUtil(req, resp);
-
             //req.getParameter() String 형태로 받아오기때문에 형변환해서 사용할것.
             int id = Integer.parseInt(req.getParameter("id"));
 
             //String.format()을 이용하면 %d 서식 지정자 사용가능
             String sql = String.format("SELECT * FROM article WHERE id = %d", id);
-            Map<String, Object> articleRow = dbUtil.selectRow(conn, sql);
+            Map<String, Object> articleRow = DBUtil.selectRow(conn, sql);
 
             req.setAttribute("articleRows", articleRow);
             req.getRequestDispatcher("../article/detail.jsp").forward(req,resp);
