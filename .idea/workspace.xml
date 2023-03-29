@@ -104,9 +104,8 @@
       <change beforePath="$PROJECT_DIR$/../../TeamPorject-MoyeoMoyeo/yarn-error.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TeamPorject-MoyeoMoyeo/yarn.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/article/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/article/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleListServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoDeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleDeleteServlet.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +156,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "jdk.selected.JAVA_MODULE": "zulu-11",
     "last_opened_file_path": "/Users/inho/Desktop/servlet_study/servlet_study/src/main/webapp/article",
-    "project.structure.last.edited": "Libraries",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.fileTypes"

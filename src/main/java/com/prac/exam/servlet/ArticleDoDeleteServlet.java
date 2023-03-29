@@ -1,5 +1,6 @@
 package com.prac.exam.servlet;
 
+import com.prac.exam.Rq;
 import com.prac.exam.util.DBUtil;
 import com.prac.exam.util.SecSql;
 import jakarta.servlet.ServletException;
@@ -12,15 +13,12 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.util.Map;
 
 @WebServlet("/article/doDelete")
-public class ArticleDeleteServlet extends HttpServlet {
+public class ArticleDoDeleteServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8"); // 들어오는데이터 UTF-8로 해석한다
-        resp.setCharacterEncoding("UTF-8"); // 완성되는 HTML의 인코딩을 UTF-8로 하겠다
-        resp.setContentType("text/html; charset-utf-8"); // 브라우저에게 우리가 만든 결과물을 UTF-8이라고 알리는 의미
+        Rq rq = new Rq(req,resp);
 
         // DB 연결시작
         Connection conn = null;
@@ -41,7 +39,10 @@ public class ArticleDeleteServlet extends HttpServlet {
         try {
             conn = DriverManager.getConnection(url, user, password);
             //req.getParameter() String 형태로 받아오기때문에 형변환해서 사용할것.
-            int id = Integer.parseInt(req.getParameter("id"));
+//            int id = Integer.parseInt(req.getParameter("id"));
+
+            //rq를 가져왔기때문에 더 쉬운 방법으로 불러오기
+            int id = rq.getIntParam("id",0);
 
             //String.format()을 이용하면 %d 서식 지정자 사용가능
 //            String sql = String.format("SELECT * FROM article WHERE id = %d", id);
@@ -51,7 +52,7 @@ public class ArticleDeleteServlet extends HttpServlet {
             sql.append("WHERE id = ?", id);
 
             DBUtil.delete(conn,sql);
-            resp.getWriter().append("<script>alert('3번글 삭제 완료.'); location.replace('list')</script>");
+            resp.getWriter().append(String.format("<script>alert('%d번글 삭제 완료.'); location.replace('list')</script>",id));
 
 
 
