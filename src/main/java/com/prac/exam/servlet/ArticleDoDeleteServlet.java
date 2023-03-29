@@ -47,12 +47,12 @@ public class ArticleDoDeleteServlet extends HttpServlet {
             //String.format()을 이용하면 %d 서식 지정자 사용가능
 //            String sql = String.format("SELECT * FROM article WHERE id = %d", id);
 
-            SecSql sql = SecSql.from("DELETE * ");
+            SecSql sql = SecSql.from("DELETE");
             sql.append("FROM article");
             sql.append("WHERE id = ?", id);
 
             DBUtil.delete(conn,sql);
-            resp.getWriter().append(String.format("<script>alert('%d번글 삭제 완료.'); location.replace('list')</script>",id));
+            rq.appendBody(String.format("<script>alert('%d번글 삭제 완료.'); location.replace('list')</script>",id));
 
 
 

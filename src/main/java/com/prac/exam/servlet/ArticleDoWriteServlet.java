@@ -39,8 +39,8 @@ public class ArticleDoWriteServlet extends HttpServlet {
         try {
             conn = DriverManager.getConnection(url, user, password);
 
-            String title = req.getParameter("title");
-            String body = req.getParameter("body");
+            String title = rq.getParam("title","");
+            String body = rq.getParam("body","");
 
             SecSql sql = SecSql.from("INSERT INTO article");
             sql.append("SET regDate = NOW()");
@@ -49,7 +49,7 @@ public class ArticleDoWriteServlet extends HttpServlet {
             sql.append(", body = ?", body);
 
             int id = DBUtil.insert(conn,sql);
-            resp.getWriter().append(String.format("<script>alert('%d번글 생성 완료.'); location.replace('list')</script>",id));
+            rq.appendBody(String.format("<script>alert('%d번글 생성 완료.'); location.replace('list')</script>",id));
 
 
 

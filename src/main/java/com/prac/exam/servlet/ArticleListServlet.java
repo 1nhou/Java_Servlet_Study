@@ -1,5 +1,6 @@
 package com.prac.exam.servlet;
 
+import com.prac.exam.Rq;
 import com.prac.exam.util.DBUtil;
 import com.prac.exam.util.SecSql;
 import jakarta.servlet.ServletException;
@@ -19,6 +20,8 @@ import java.util.Map;
 public class ArticleListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Rq rq = new Rq(req,resp);
+
         // DB 연결시작
         Connection conn = null;
         try {
@@ -42,7 +45,9 @@ public class ArticleListServlet extends HttpServlet {
             int page = 1;
 
             if(req.getParameter("page") != null && req.getParameter("page").length() != 0){
-                page = Integer.parseInt(req.getParameter("page"));
+//                page = Integer.parseInt(req.getParameter("page"));
+                //rq 객체를 가져옴으로써 간단하게 서술
+                page = rq.getIntParam("page", 0);
             }
 
 
@@ -62,8 +67,6 @@ public class ArticleListServlet extends HttpServlet {
             sql.append("FROM article");
             sql.append("ORDER BY id DESC");
             sql.append("LIMIT ?, ?", limitFrom,itemInPage);
-
-            System.out.println(sql);
 
             List<Map<String, Object>> articleRows = DBUtil.selectRows(conn, sql);
 

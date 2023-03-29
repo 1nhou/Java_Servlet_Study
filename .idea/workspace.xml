@@ -104,8 +104,12 @@
       <change beforePath="$PROJECT_DIR$/../../TeamPorject-MoyeoMoyeo/yarn-error.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../TeamPorject-MoyeoMoyeo/yarn.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoDeleteServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleDeleteServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/Rq.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/Rq.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoDeleteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoDeleteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoWriteServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleDoWriteServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/prac/exam/servlet/ArticleListServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/Rq.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prac/exam/Rq.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleListServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/prac/exam/servlet/ArticleListServlet.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
